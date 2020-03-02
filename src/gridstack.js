@@ -1318,6 +1318,11 @@
       // mineHeight - Each row is cellHeight + verticalMargin, until last one which has no margin below
       self.dd.resizable(el, 'option', 'minWidth', cellWidth * (node.minWidth || 1));
       self.dd.resizable(el, 'option', 'minHeight', (strictCellHeight * minHeight) + (minHeight - 1) * verticalMargin);
+      
+      self.dd.resizable(el, 'option', 'maxWidth', cellWidth * (node.maxWidth || 1));
+      self.dd.resizable(el, 'option', 'maxHeight', (strictCellHeight * maxHeight) + (maxHeight - 1) * verticalMargin);
+  
+
 
       if (event.type === 'resizestart') {
         o.find('.grid-stack-item').trigger('resizestart');
